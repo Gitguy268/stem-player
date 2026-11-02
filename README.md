@@ -18,6 +18,37 @@ Not affiliated with or endorsed by the makers of the original devices. No logos,
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | ![Isolating stems, then the loop and speed menu, then turning to the edge buttons](docs/images/handheld.webp) | ![Swapping stems from another song, the loop menu, then turning to the ports](docs/images/speaker.webp) |
 
+<!-- run-steps:start -->
+## Run it locally, step by step
+
+1. **Install [Node.js](https://nodejs.org) 22.12** or newer.
+
+2. **Get the code:**
+
+   ```sh
+   git clone https://github.com/Gitguy268/stem-player.git
+   cd stem-player
+   ```
+
+3. **Install the dependencies:**
+
+   ```sh
+   npm ci
+   ```
+
+4. **Start it:**
+
+   ```sh
+   npm start
+   ```
+
+   On a Mac you can double-click `start.command` instead of these two steps.
+
+5. **Open <http://localhost:8791/>** in your browser. Press `Ctrl+C` in the terminal to stop.
+
+> The stem splitter downloads a Demucs model from Hugging Face the first time you use it. That model repository states no licence, so the model is not part of this project and not covered by its licence.
+<!-- run-steps:end -->
+
 ## Run it
 
 You need [Node.js](https://nodejs.org) 22.12 or newer.

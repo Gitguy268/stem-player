@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Four Stem Player</title>
+    <meta
+      name="description"
+      content="An unofficial browser replica of two four-stem hardware music players, in real-time 3D. Splits any song into stems on your own machine."
+    />
+    <meta name="theme-color" content="#E8E5D9" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script>
+      if (location.protocol === 'file:') {
+        addEventListener('DOMContentLoaded', function () {
+          document.getElementById('file-note').hidden = false;
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="stage" aria-label="3D player. Use the buttons below or the keyboard shortcuts."></canvas>
+    <p id="caption" aria-live="polite"></p>
+
+    <header class="top">
+      <div class="devices" role="radiogroup" aria-label="Device">
+        <button data-look="tan" role="radio">Tan</button>
+        <button data-look="bao" role="radio">Bao</button>
+        <button data-look="clear" role="radio">Clear</button>
+        <button data-look="v2" role="radio">Speaker</button>
+      </div>
+      <div class="views" aria-label="Turn the device">
+        <button data-view="front">Front</button>
+        <button data-view="buttons">Buttons</button>
+        <button data-view="ports">Ports</button>
+        <button data-view="back">Back</button>
+      </div>
+    </header>
+
+    <footer class="bottom">
+      <div class="now">
+        <span id="album"></span>
+        <strong id="title">Loading</strong>
+        <span id="time"></span>
+      </div>
+      <div class="actions">
+        <button id="open-manage">Library</button>
+        <button id="open-help">Help</button>
+      </div>
+    </footer>
+
+    <div id="a11y-controls" class="sr-only" role="group" aria-label="Device controls"></div>
+
+    <dialog id="manage" aria-labelledby="manage-title">
+      <header>
+        <h2 id="manage-title">Library</h2>
+        <button class="close" value="close" aria-label="Close">×</button>
+      </header>
+      <section>
+        <h3>Add music</h3>
+        <p class="hint">
+          Pick a normal song to split it into stems, or four stem files at once. Files named <code>1</code> to
+          <code>4</code>, or <code>vocals</code>, <code>bass</code>, <code>drums</code>, <code>other</code>, become one
+          track. <code>TRACK.txt</code> is read if present.
+        </p>
+        <div class="row">
+          <label class="btn"
+            >Upload files<input id="file-input" type="file" accept="audio/*,.txt" multiple hidden
+          /></label>
+          <label class="btn">Upload a folder<input id="folder-input" type="file" webkitdirectory hidden /></label>
+        </div>
+        <div id="split" hidden>
+          <p id="split-text"></p>
+          <progress id="split-bar" max="1" value="0"></progress>
+          <div class="row">
+            <button id="split-go" hidden>Download and split</button><button id="split-cancel">Cancel</button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Songs</h3>
+        <ul id="songs" class="list"></ul>
+      </section>
+      <section>
+        <h3>Recordings</h3>
+        <ul id="recs" class="list"></ul>
+      </section>
+      <section>
+        <h3>Settings</h3>
+        <label class="check"><input id="mute-click" type="checkbox" /> Speaker: double tap mutes a stem</label>
+        <details>
+          <summary>config.txt</summary>
+          <textarea id="config" rows="9" spellcheck="false" aria-label="config.txt"></textarea>
+          <button id="config-save">Apply</button>
+        </details>
+      </section>
+      <section id="debug-menu" hidden>
+        <h3>Debug</h3>
+        <dl id="debug-info"></dl>
+        <label>Battery <input id="battery" type="range" min="0" max="100" /></label>
+        <button id="factory" class="danger">Factory reset</button>
+      </section>
+      <div id="secret" aria-hidden="true"></div>
+    </dialog>
+
+    <dialog id="help" aria-labelledby="help-title">
+      <header>
+        <h2 id="help-title">How it works</h2>
+        <button class="close" value="close" aria-label="Close">×</button>
+      </header>
+      <div id="help-body"></div>
+      <p class="hint">Unofficial fan project, not affiliated with or endorsed by the makers of the original devices.</p>
+    </dialog>
+
+    <div id="file-note" hidden>
+      <div>
+        <h1>This needs to run from a small local server</h1>
+        <p>
+          Browsers block this page's audio workers on files opened directly. Double-click <code>start.command</code> in
+          this folder. On Windows or Linux, run <code>npm start</code>.
+        </p>
+      </div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

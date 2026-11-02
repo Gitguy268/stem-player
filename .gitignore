@@ -1,0 +1,11 @@
+docs/reference/
+node_modules/
+dist/
+.DS_Store
+.env
+.scratch/
+test-results/
+playwright-report/
+.vercel/
+.env.*
+!.env.example

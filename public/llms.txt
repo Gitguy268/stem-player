@@ -1,0 +1,6 @@
+# Four Stem Player
+
+> An unofficial browser replica of two four-stem hardware music players, in real-time 3D. It splits songs into stems locally with Demucs. Static site, no backend.
+
+- [README](https://github.com/Gitguy268/stem-player#readme)
+- [Device parity record](https://github.com/Gitguy268/stem-player/blob/main/docs/PARITY.md)

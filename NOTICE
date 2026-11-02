@@ -1,0 +1,25 @@
+Four Stem Player
+Copyright (c) 2026 Lucas Van De Weerd. MIT licence, see LICENSE.
+
+This is an unofficial fan project. It is not affiliated with, endorsed by or
+connected to Stem, Kano, Yeezy or any maker of the original devices. Product
+names are used only to say what this replicates. No logos, product photos,
+product videos or commercial music are included in this repository.
+
+Runtime dependencies
+- three.js, MIT, https://github.com/mrdoob/three.js
+- ONNX Runtime Web, MIT, https://github.com/microsoft/onnxruntime
+- demucs-web by timcsy, MIT, https://github.com/timcsy/demucs-web
+
+Downloaded at run time, never bundled
+- htdemucs_embedded.onnx, from https://huggingface.co/timcsy/demucs-web-onnx
+  A conversion of Meta's HT Demucs (MIT code and weights,
+  https://github.com/facebookresearch/demucs). The conversion's own repository
+  states no licence. It is outside the MIT grant of this project.
+
+Ideas only, with no code taken
+- reidbarber/stemplayer and cvd9683-gif/stem-player state no licence.
+- lukew3/stemPlayerOnline (Unlicense): the idea of a four-step LED gradient.
+- krystalgamer/stem-player-emulator (MIT): facts about the device's file layout.
+- The community manual by Gare and the yeezymafia guide: control behaviour and
+  the config.txt and TRACK.txt fields.

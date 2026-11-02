@@ -1,0 +1,46 @@
+{
+  "name": "stem-player",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An unofficial browser replica of both generations of the four-stem hardware music player, in real-time 3D, with in-browser stem separation.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Lucas Van De Weerd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gitguy268/stem-player.git"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --port 8792 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "start": "npm run build && node scripts/serve.mjs",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "check:browser": "node scripts/check-browser.mjs",
+    "check:overlay": "node scripts/check-overlay.mjs",
+    "check:demucs": "node scripts/check-demucs.mjs",
+    "verify": "npm run lint && npm run format:check && npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "demucs-web": "1.0.2",
+    "onnxruntime-web": "1.31.1",
+    "three": "0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "@types/three": "0.187.0",
+    "eslint": "10.14.0",
+    "playwright": "1.63.0",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  }
+}

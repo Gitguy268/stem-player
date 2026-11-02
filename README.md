@@ -18,6 +18,10 @@ Not affiliated with or endorsed by the makers of the original devices. No logos,
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | ![Isolating stems, then the loop and speed menu, then turning to the edge buttons](docs/images/handheld.webp) | ![Swapping stems from another song, the loop menu, then turning to the ports](docs/images/speaker.webp) |
 
+<!-- live-links -->
+**Live:** [gitguy268.github.io/stem-player](https://gitguy268.github.io/stem-player/) · [stem-player-nine.vercel.app](https://stem-player-nine.vercel.app)
+<!-- /live-links -->
+
 <!-- run-steps:start -->
 ## Run it locally, step by step
 

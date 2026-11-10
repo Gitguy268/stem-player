@@ -22,6 +22,14 @@ Not affiliated with or endorsed by the makers of the original devices. No logos,
 **Live:** [gitguy268.github.io/stem-player](https://gitguy268.github.io/stem-player/) · [stem-player-nine.vercel.app](https://stem-player-nine.vercel.app)
 <!-- /live-links -->
 
+## Install with Homebrew
+
+```sh
+brew trust gitguy268/tap
+brew install gitguy268/tap/stem-player
+stem-player --open   # http://localhost:8791/
+```
+
 <!-- run-steps:start -->
 ## Run it locally, step by step
 

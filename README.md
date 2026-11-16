@@ -19,10 +19,12 @@ Not affiliated with or endorsed by the makers of the original devices. No logos,
 | ![Isolating stems, then the loop and speed menu, then turning to the edge buttons](docs/images/handheld.webp) | ![Swapping stems from another song, the loop menu, then turning to the ports](docs/images/speaker.webp) |
 
 <!-- live-links -->
+
 **Live:** [gitguy268.github.io/stem-player](https://gitguy268.github.io/stem-player/) · [stem-player-nine.vercel.app](https://stem-player-nine.vercel.app)
 <!-- /live-links -->
 
 <!-- run-steps:start -->
+
 ## Run it locally, step by step
 
 1. **Install [Node.js](https://nodejs.org) 22.12** or newer.
@@ -51,6 +53,7 @@ Not affiliated with or endorsed by the makers of the original devices. No logos,
 5. **Open <http://localhost:8791/>** in your browser. Press `Ctrl+C` in the terminal to stop.
 
 > The stem splitter downloads a Demucs model from Hugging Face the first time you use it. That model repository states no licence, so the model is not part of this project and not covered by its licence.
+
 <!-- run-steps:end -->
 
 ## Run it

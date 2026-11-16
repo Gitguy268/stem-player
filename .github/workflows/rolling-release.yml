@@ -4,7 +4,7 @@ name: Rolling release
 # the tag is moved to that commit and the assets are rebuilt and replaced on every push.
 on:
   workflow_run:
-    workflows: ["Pages"]
+    workflows: ['Pages']
     types: [completed]
     branches: [main]
   workflow_dispatch:
@@ -158,7 +158,7 @@ jobs:
           GH_REPO: ${{ github.repository }}
           SHA: ${{ needs.build.outputs.sha }}
           BRANCH: main
-          PRERELEASE: "false"
+          PRERELEASE: 'false'
         run: |
           set -euo pipefail
           mkdir -p out
